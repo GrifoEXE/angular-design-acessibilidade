@@ -19,12 +19,16 @@ export class YesNoButtonGroupComponent implements OnInit, ControlValueAccessor {
   @Input() public label = ''
   @Output() public valueChange = new EventEmitter()
 
+
+  public id: string = null;
   public options = YesNoButtonGroupOptions
 
   public onChange = (value: string) => { }
   public onTouched = () => { }
 
-  constructor() { }
+  constructor() {
+    this.id = `yes-no-button-group`
+  }
 
 
   ngOnInit(): void {

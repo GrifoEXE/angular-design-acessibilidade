@@ -2,7 +2,7 @@
   <label class="label">{{ label }}</label>
   <button
     role="radio"
-    [attr.aria-checked]="value === options.YES"
+    [attr.aria-label]="label"
     type="button"
     class="button button-yes"
     [class.button-pressed]="value === options.YES"
