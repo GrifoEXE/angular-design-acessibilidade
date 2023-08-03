@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-
+import * as uuid from 'uuid'
 @Component({
   selector: 'app-yes-no-button-group',
   templateUrl: './yes-no-button-group.component.html',
@@ -27,9 +27,8 @@ export class YesNoButtonGroupComponent implements OnInit, ControlValueAccessor {
   public onTouched = () => { }
 
   constructor() {
-    this.id = `yes-no-button-group`
+    this.id = `yes-no-button-group${uuid.v1()}`
   }
-
 
   ngOnInit(): void {
   }

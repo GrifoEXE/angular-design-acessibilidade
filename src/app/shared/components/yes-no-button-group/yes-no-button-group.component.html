@@ -1,5 +1,8 @@
-<div role="radiogroup" aria-labelledby="label" class="button-group">
-  <label class="label">{{ label }}</label>
+<div
+    role="radiogroup"
+    [attr.aria-labelledby]="label"
+    class="button-group">
+  <label [attr.id]="label" class="label">{{ label }}</label>
   <button
     role="radio"
     [attr.aria-label]="label"
